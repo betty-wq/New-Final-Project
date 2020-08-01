@@ -6,7 +6,7 @@ const isAuthenticated = (req, res, next) =>{
     if (req.session.currentUser){
         return next()
     } else {
-        res.redirect('/')
+        res.redirect('/sessions/new')
     }
 }
 
@@ -20,14 +20,14 @@ const isAuthenticated = (req, res, next) =>{
       Car.find({}, (error, allCars) =>{
           res.render('Index', {
             cars: allCars,
-  
+            username: req.session.currentUser,
           })
       })
   })
   
 
   // New
-  carController.get('/New', (req, res) =>{
+  carController.get('/New', isAuthenticated, (req, res) =>{
       res.render('New')
   })
   
@@ -82,16 +82,16 @@ const isAuthenticated = (req, res, next) =>{
               transmission: '7-speed automated manual',
               features: 'Remote Anti-Theft Alarm System, Side And Rear Cross Traffic Assist Package, Auxiliary Audio Input, Keyless Ignition,'
           },
-          {
-              name: '2020 Bentley Continental GT',
-              img: 'https://car-pictures.cars.com/images/?IMG=USC90BEC062A01300.jpg&HEIGHT=600',
-              img2: 'https://car-pictures.cars.com/images/?IMG=USD00BEC062B01300.jpg&HEIGHT=600',
-              price: 202500,
-              mpg: '16-26',
-              fuel_type: 'Gasoline',
-              transmission: '8-speed automated manual',
-              features: 'Leather front and rear seat upholstery, Driver and passenger heated-seatbacks, Real-time weather display, Primary monitor touchscreen, Wireless phone connectivity'
-          },
+        //   {
+        //       name: '2020 Bentley Continental GT',
+        //       img: 'https://car-pictures.cars.com/images/?IMG=USC90BEC062A01300.jpg&HEIGHT=600',
+        //       img2: 'https://car-pictures.cars.com/images/?IMG=USD00BEC062B01300.jpg&HEIGHT=600',
+        //       price: 202500,
+        //       mpg: '16-26',
+        //       fuel_type: 'Gasoline',
+        //       transmission: '8-speed automated manual',
+        //       features: 'Leather front and rear seat upholstery, Driver and passenger heated-seatbacks, Real-time weather display, Primary monitor touchscreen, Wireless phone connectivity'
+        //   },
           {
               name: '2019 Cadillac ATS',
               img: 'https://www.cstatic-images.com/car-pictures/maxWidth503/usc80cac204a021001.png',
@@ -108,7 +108,7 @@ const isAuthenticated = (req, res, next) =>{
   })
   
   // Delete
-  carController.delete('/:id', (req, res) =>{
+  carController.delete('/:id', isAuthenticated, (req, res) =>{
       Car.findByIdAndRemove(req.params.id, (error, data) =>{
           res.redirect('/cars/display')
       })
@@ -128,7 +128,7 @@ carController.get('/display', (req, res) =>{
   })
   
   // Edit
-  carController.get('/edit/:id', (req, res) =>{
+  carController.get('/edit/:id', isAuthenticated, (req, res) =>{
       Car.findById(req.params.id, (error, foundCar) =>{
           res.render('Edit', {car: foundCar})
       })

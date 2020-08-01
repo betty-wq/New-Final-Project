@@ -6,13 +6,13 @@ class LoginUser extends React.Component {
         return(
             <Layout>
             <div class="container">
-                <a href="/cars">Home</a><br/>
+                {/* <a href="/cars">Home</a><br/> */}
                 <a href="/user/new">Sign up</a>
                 <h1>Login</h1>
                 <form action="/sessions/" method="POST">
                     username: <input type="text" name="username"/><br/>
                     password: <input type="password" name="password"/><br/>
-                    <input type="submit" value="login"/>
+                    <input type="submit" value="Login"/>
                 </form>
             </div>
             </Layout>

@@ -8,19 +8,26 @@ class Layout extends React.Component {
                 <link rel="stylesheet" href="./style.css"></link>
                 <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet"></link>
                 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"></link>
-                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"></link>
 
                     <title>Cars App</title>
                 </head>
                 <body>
+                    <div>
+                    <ul class="navs">
+                <li class="nav"><a href="/cars">Home</a></li>
+                <li class="nav"><a href="#">ABOUT US</a></li>
+               <li class="nav"><a href="/cars/Display">VIEW VEHICLES</a></li>
+                {/* <li class="nav"><a href="./sessions/new">SIGN IN</a></li> */}
+               <li class="nav">< a href="/cars/new">ADD A NEW CAR</a></li>
+               </ul>
                     <h1>{this.props.name}</h1>
                     <main>
                      {this.props.children}
                     </main>
                     <footer >
-                    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                     </div>
+                    <div class="footer-copyright text-center py-3">© 2020 Copyright:</div>
                     </footer>
+                    </div>
                 </body>
             </html>
         )

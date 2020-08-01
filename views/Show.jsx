@@ -7,21 +7,22 @@ class Show extends React.Component {
         console.log(car)
         return(
              <Layout>
-                 <div class="container">
-                 <a href="/cars/display" class="btn btn-secondary">Return To Display</a>
+                 <div>
+                 <a href="/cars/display">Return To Display</a>
                    <h1>{car.name}</h1>
                    <img src={car.img}/>
                    <img src={car.img2}></img>
                    <p>Price: $ {car.price}</p>
                    <ul>
-                       <li class="list-group-item">MPG: {car.mpg}</li>
-                       <li class="list-group-item">Feul Type: {car.fuel_type}</li>
-                       <li class="list-group-item">Tansmission: {car.transmission}</li>
-                       <li class="list-group-item">Features: {car.features}</li>
+                       <li>MPG: {car.mpg}</li>
+                       <li>Feul Type: {car.fuel_type}</li>
+                       <li>Tansmission: {car.transmission}</li>
+                       <li>Features: {car.features}</li>
                    </ul>
-                   <form action={`/cars/${car._id}?_method=DELETE`} method="post">
-                   <input id="button" type="submit" value="Buy"/>
-                   </form>
+                   {/* <form action={`/cars/${car._id}?_method=DELETE`} method="post"> */}
+                   {/* <input id="button" type="submit" value="Buy"/> */}
+                   <button><a href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fpaypalme&state=%2Fmy%2Fprofile%3Flocale.x%3Den_US%26country.x%3DUS">Buy</a></button>
+                   {/* </form> */}
                    </div>
              </Layout>
         )

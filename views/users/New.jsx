@@ -6,9 +6,9 @@ class NewUser extends React.Component {
         return(
             <Layout>
             <div class="container">
-                <a href="/cars">Home</a><br/>
+                {/* <a href="/cars">Home</a><br/> */}
                 <h1>New User</h1>
-                <form action="/user/new" method="Post">
+                <form action="/user/" method="POST">
                     username: <input type="text" name="username"/><br/>
                     password: <input type="password" name="password"/><br/>
                     <input type="submit" value="create user"/> 

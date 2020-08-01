@@ -7,9 +7,9 @@ class Display extends React.Component {
         console.log(cars)
         return(
              <Layout>
-                  <div class="container">
-                  <a href="/cars" class="btn btn-secondary">Home</a>
-                      <h1 class="jumbotron">Our latest model cars are listed below if you want to see detail about the cars click on the image of the vehicle.</h1>
+                  <div>
+                  {/* <a href="/cars" class="btn btn-secondary">Home</a> */}
+                      <h1>Our latest model cars are listed below if you want to see detail about the cars click on the image of the vehicle.</h1>
                    {cars.map((car, index) =>{
                        return(
                            <div>

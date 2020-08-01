@@ -6,6 +6,7 @@ const session = require('express-session')
 const mongoose = require ('mongoose');
 const app = express ();
 const db = mongoose.connection;
+const bcrypt = require('bcryptjs');
 const Car = require('./models/cars.js')
 const carsController = require('./controllers/cars.js')
 const User = require('./models/users.js')
@@ -79,8 +80,8 @@ app.post('/sessions/', (req, res) =>{
             res.redirect('/user/new')
         } else {
             if (bcrypt.compareSync(req.body.password, foundUser.password)){
-                req.session.currentUser = foundUser.username
-                res.redirect('/cars/')
+                req.session.currentUser = foundUser.username;
+                res.redirect('/cars/');
             } else{
                 res.send('WRONG PASSWORD')
             }
