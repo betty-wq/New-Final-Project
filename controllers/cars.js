@@ -117,9 +117,11 @@ const isAuthenticated = (req, res, next) =>{
 // Display
 carController.get('/display', (req, res) =>{
     Car.find({}, (error, allCars)=>{
-        res.render('Display', {cars: allCars})
+        res.render('Display', {cars: allCars,
+        })
     })
 })
+
   // Show
   carController.get('/:id', (req, res) =>{
       Car.findById(req.params.id, (error, foundCar) =>{
@@ -140,7 +142,6 @@ carController.get('/display', (req, res) =>{
           res.redirect('/cars/display')
       })
   })
-  
   
   /// Export
   module.exports = carController

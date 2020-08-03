@@ -1,6 +1,7 @@
 
 //Dependencies
 const express = require('express');
+const path = require('path')
 const methodOverride  = require('method-override');
 const session = require('express-session')
 const mongoose = require ('mongoose');
@@ -32,7 +33,7 @@ db.on('open' , ()=>{});
 //Middleware
 //___________________
 //use public folder for static assets
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
 app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
@@ -51,8 +52,6 @@ app.use('/cars', carsController)
 app.use('/user', userController)
 //___________________
 // Routes
-//___________________
-//localhost:3000 
 
 // app.get('/' , (req, res) => {
 //   res.send('Hello World!');
@@ -81,7 +80,7 @@ app.post('/sessions/', (req, res) =>{
         } else {
             if (bcrypt.compareSync(req.body.password, foundUser.password)){
                 req.session.currentUser = foundUser.username;
-                res.redirect('/cars/');
+                res.redirect('/cars');
             } else{
                 res.send('WRONG PASSWORD')
             }

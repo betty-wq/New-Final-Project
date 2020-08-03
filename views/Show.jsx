@@ -19,10 +19,7 @@ class Show extends React.Component {
                        <li>Tansmission: {car.transmission}</li>
                        <li>Features: {car.features}</li>
                    </ul>
-                   {/* <form action={`/cars/${car._id}?_method=DELETE`} method="post"> */}
-                   {/* <input id="button" type="submit" value="Buy"/> */}
                    <button><a href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fpaypalme&state=%2Fmy%2Fprofile%3Flocale.x%3Den_US%26country.x%3DUS">Buy</a></button>
-                   {/* </form> */}
                    </div>
              </Layout>
         )

@@ -5,8 +5,7 @@ class New extends React.Component {
     render(){
         return(
            <Layout>
-               <div>
-               {/* <a href="/cars" class="btn btn-secondary">Home</a> */}
+               <div class="new">
                <div>
                <h1>Build a new car</h1>
                <p>"I couldn't find the car of my dreams, so I built it myself." -Ferdinand Porche</p>

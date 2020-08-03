@@ -6,7 +6,6 @@ class LoginUser extends React.Component {
         return(
             <Layout>
             <div class="container">
-                {/* <a href="/cars">Home</a><br/> */}
                 <a href="/user/new">Sign up</a>
                 <h1>Login</h1>
                 <form action="/sessions/" method="POST">

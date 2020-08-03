@@ -7,7 +7,6 @@ class Edit extends React.Component{
         return(
             <Layout>
                 <div>
-                {/* <a href="/cars/display" class="btn btn-secondary">Return To Display</a> */}
                 <h1>Edit</h1>
                 <form action={`/cars/edit/${car._id}?_method=put`} method="POST">
                       Name:        <input type="text" name="name" value={car.name}/><br/>

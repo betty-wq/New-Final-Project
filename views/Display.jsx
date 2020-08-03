@@ -1,5 +1,5 @@
 const React = require('react')
-const Layout = require('./Layout.jsx')
+const Layout = require('./Layout')
 
 class Display extends React.Component {
     render() {
@@ -8,7 +8,6 @@ class Display extends React.Component {
         return(
              <Layout>
                   <div>
-                  {/* <a href="/cars" class="btn btn-secondary">Home</a> */}
                       <h1>Our latest model cars are listed below if you want to see detail about the cars click on the image of the vehicle.</h1>
                    {cars.map((car, index) =>{
                        return(
@@ -16,10 +15,10 @@ class Display extends React.Component {
                <h1>{car.name}</h1>
                <a href={`/cars/${car._id}`}><img src={car.img}></img></a>
                <form action={`/cars/${car._id}?_method=DELETE`} method="post">
-                   <input class="btn btn-outline-danger" type="submit" value="Delete"/>
+                   <input type="submit" value="Delete"/>
                </form>
                <form action={`/cars/edit/${car._id}`} method="GET">
-                  <input class="btn btn-outline-success" type="submit" value="Edit"/>
+                  <input type="submit" value="Edit"/>
                </form>
                </div>
                 )

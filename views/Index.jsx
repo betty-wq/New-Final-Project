@@ -11,7 +11,7 @@ class Index extends React.Component {
         const { cars } = this.props;
        return(
            <Layout>
-               <div>
+               <div class="main">
                {this.props.username ? logout : ''}
                <div>
                <h1>Welcome to My Cars {this.props.username}</h1>

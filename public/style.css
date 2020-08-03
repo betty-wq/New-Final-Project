@@ -1,10 +1,10 @@
-body {
+/* home */
+.main{
    background-image: url(https://i2.wp.com/photos.smugmug.com/Africa/Morocco/Sahara/i-hx8BBH7/0/a2421653/L/2019-03-22%20at%2018-18-17-L.jpg);
    background-size: cover;
-
 }
 .navs {
-    list-style-type: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -12,6 +12,7 @@ body {
 }
 .nav {
     float: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .nav>a {
     display: block;
@@ -47,9 +48,7 @@ img{
 div>h1{
     text-align: center;
 }
-div>.bg{
-    background-color: green;
-}
+
 .forms{
     text-align: center;
 }
