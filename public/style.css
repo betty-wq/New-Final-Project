@@ -1,4 +1,5 @@
 /* home */
+
 .main{
    background-image: url(https://i2.wp.com/photos.smugmug.com/Africa/Morocco/Sahara/i-hx8BBH7/0/a2421653/L/2019-03-22%20at%2018-18-17-L.jpg);
    background-size: cover;
@@ -39,11 +40,11 @@ h2{
     border-top: 25px;
     color: navy;
 }
-img{
+/* img{
     width: 50%;
     margin-bottom: 70px;
     margin-top: 70px;
-}
+} */
 
 div>h1{
     text-align: center;
@@ -55,16 +56,144 @@ div>h1{
 
 div>p{
     text-align: center;
-
     margin-left: 120px;
     margin-right: 120px;
     font-family: 'Courgette', cursive;
 }
 
 footer{
+    margin-top: 15px;
     background-color: slategrey;
     color: white;
     height: 70px;
     text-align: center;
+    padding-top: 20px;
+}
+
+.mycars{
+    width:100%; 
+    height:0px; 
+    padding-bottom: 50%;
+    position:relative; 
+    overflow: hidden;
+}
+.mycars>img {
+    position:absolute; 
+    animation:fling-minislide 30s infinite; 
+    width: 100%; 
+    height: auto;
+}
+
+
+
+/* display */
+
+.header{
+    color: green;
+    font-family: serif;
+}
+.cars{
+    margin-left: 25%;
+}
+.cars:hover{
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.3);
+}
+.carlist{
+    background-color: whitesmoke;
+}
+.carlist:hover{
+    background-color: silver;
+}
+
+.carname{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+.buttons{
+    float: left;
+}
+.button{
+   color: green;
+}
+.button:hover{
+    background-color: black;
+    color: white;
+}
+
+/* Show */
+
+.showbox{
+    background-color: rgb(214, 218, 219);
+    bottom: 60px;
+}
+.buybutton {
+      text-decoration: none;
+      color: black;
+      font-weight: 800;
+}
+.buy{
+    margin-left: 50%;
+    margin-bottom: 20px;
+}
+.buy:hover{
+    background-color: black;
+}
+.buybutton:hover{
+    color: white;
+}
+
+/* login */
+
+.login{
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.logincontainer{
+    margin-bottom: 50%;
+}
+.logininput{
+    width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.loginform{
+    margin-left: 35%;
+}
+
+/* New */
+
+.newform{
+    margin-left: 35%;
+}
+.newinput{
+    width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Edit */
+
+.editform{
+    border: solid black 4px;
+    padding-left: 130px;
+}
+.editinput{
+    width: 50%;
+  padding: 12px 20px;
+  margin: 8px 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 

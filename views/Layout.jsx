@@ -8,17 +8,16 @@ class Layout extends React.Component {
                 <link rel="stylesheet" href="/style.css"></link>
                 <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet"></link>
                 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"></link>
-
+                
                     <title>Cars App</title>
                 </head>
                 <body>
                     <div>
-                    <ul class="navs">
+                    {/* <ul class="navs">
                 <li class="nav"><a href="/cars">HOME</a></li>
                <li class="nav"><a href="/cars/Display">VEHICLES</a></li>
-                {/* <li class="nav"><a href="./sessions/new">SIGN IN</a></li> */}
                <li class="nav">< a href="/cars/new">ADD A NEW CAR</a></li>
-               </ul>
+               </ul> */}
                     <h1>{this.props.name}</h1>
                     <main>
                      {this.props.children}
